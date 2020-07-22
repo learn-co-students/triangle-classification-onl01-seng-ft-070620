@@ -15,7 +15,7 @@ class Triangle
   end
   
   def valid? 
-    self.a + self.b > self.c && self.b + self.c > self.a && self.a + self.c > self.b && a > 0 && b > 0 && c > 0
+    self.a + self.b > self.c && self.b + self.c > self.a && self.a + self.c > self.b #&& a > 0 && b > 0 && c > 0
   end
 
   def kind
@@ -34,6 +34,8 @@ class Triangle
 
 
   class TriangleError < StandardError
-    #triangle error code here
+    def message
+      "This is not a valid triangle."
+    end
   end
 end
