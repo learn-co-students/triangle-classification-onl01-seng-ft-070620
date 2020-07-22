@@ -4,7 +4,6 @@ class Triangle
 
   attr_accessor :l1, :l2, :l3
 
-
   def initialize(l1, l2, l3)
     @l1 = l1 
     @l2 = l2 
@@ -24,13 +23,10 @@ class Triangle
       "isosceles".to_sym 
     elsif self.l1 != self.l2 && self.l2 != self.l3 
       "scalene".to_sym 
-  end 
+    end 
   end 
 
   class TriangleError < StandardError
-    def message 
-      "negative sides are illegal"
-    end
   end
 
 end
